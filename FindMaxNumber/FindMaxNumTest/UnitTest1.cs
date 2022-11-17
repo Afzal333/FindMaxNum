@@ -49,6 +49,27 @@ namespace FindMaxNumTest
             float result = maxNum.FindMaxFloat(5.5F, 5.4F, 5.7F);
             Assert.AreEqual(5.7F, result);
         }
+        [Test]
+        public void GivenMaxFirstNumSring_WhenAnalysed_ShouldReturnFirstMax()
+        {
+            string result = maxNum.FindMaxString("Peach", "Apple", "Banana");
+            Assert.AreEqual("Peach", result);
+        }
+
+        [Test]
+        public void GivenMaxSecondNumString_WhenAnalysed_ShouldReturnSecondMax()
+        {
+
+            string result = maxNum.FindMaxString("Apple", "Peach", "Banana");
+            Assert.AreEqual("Peach", result);
+        }
+
+        [Test]
+        public void GivenMaxThirdNumString_WhenAnalysed_ShouldReturnThirdMax()
+        {
+            string result = maxNum.FindMaxString("Apple", "Banana", "Peach");
+            Assert.AreEqual("Peach", result);
+        }
 
     }
 }
